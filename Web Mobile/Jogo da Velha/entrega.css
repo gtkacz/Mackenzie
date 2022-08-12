@@ -126,12 +126,16 @@ body {
     color: var(--grey1);
     font-family: 'Comfortaa', cursive;
     font-size: 2.5ch !important;
+    display: inline-block;
+    line-height: 1.66ch !important;
 }
 
 .O-small {
     color: var(--grey1);
     font-family: 'Comfortaa', cursive;
     font-size: 2.5ch !important;
+    display: inline-block;
+    line-height: 1.66ch !important;
 }
 
 
@@ -148,13 +152,15 @@ body {
     -ms-border-radius: 0.66ch;
     -o-border-radius: 0.66ch;
     width: 15ch;
-    padding: 0.25ch;
+    padding: 0.75ch;
     color: var(--grey1);
     filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     display: flex;
-    align-items: center;
+    align-items: center !important;
+    align-content: center !important;
     justify-content: space-around;
+    justify-items: center !important;
 }
 
 .header p {
@@ -180,4 +186,18 @@ body {
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
+}
+
+.rodada p {
+    display: inline-block;
+    line-height: 1.5ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
 }
