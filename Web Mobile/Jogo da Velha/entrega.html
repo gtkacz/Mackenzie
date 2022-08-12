@@ -9,11 +9,10 @@
         <link rel="shortcut icon" href="https://graduacao.mackenzie.br/pluginfile.php/1/theme_moove/favicon/1644284959/favicon%20%288%29%20%281%29%20%281%29.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
         <script type="text/javascript" src="resources/js/entrega.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/timecircles/1.5.3/TimeCircles.min.js" integrity="sha512-FofOhk0jW4BYQ6CFM9iJutqL2qLk6hjZ9YrS2/OnkqkD5V4HFnhTNIFSAhzP3x//AD5OzVMO8dayImv06fq0jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Mobile</title>
@@ -25,26 +24,37 @@
                 <span class="X">X</span>
                 <span class="O">O</span>
             </div>
-            <button>RODADA</button>
+            <button class="rodada">
+                <span class="rodada-div">
+                    <span class="X-small">X</span>
+                    <p>RODADA</p>
+                </span>
+            </button>
             <button>RESTART</button>
         </nav>
         <div class="row card-grid">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div style="margin:none">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
 
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
             
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
         </div>
         <div class="row score-card-grid">
-            <div class="score-card score-green">X (você) <h3>0</h3></div>
-            <div class="score-card score-grey">Empates <h3>0</h3></div>
-            <div class="score-card score-yellow">O (CPU) <h3>0</h3></div>
+            <div class="score-card score-green">X (você)<h3>0</h3></div>
+            <div class="score-card score-grey">EMPATES<h3>0</h3></div>
+            <div class="score-card score-yellow">O (CPU)<h3>0</h3></div>
         </div>
     </div>
 </body>
