@@ -18,6 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 75ch;
 }
 
 .card-grid {
@@ -30,8 +31,6 @@ body {
 
 .card {
     display: flex;
-    /*flex: 1 0 25%;
-    */
     justify-content: center;
     align-items: center;
     border-radius: 3ch;
@@ -42,6 +41,21 @@ body {
     background-color: var(--dark2);
     filter: drop-shadow( 1px 1px 3px rgba(0, 0, 0, 0.5));
     -webkit-filter: drop-shadow( 1px 1px 3px rgba(0, 0, 0, 0.5));
+    transition: ease-in-out 150ms;
+    -webkit-transition: ease-in-out 150ms;
+    -moz-transition: ease-in-out 150ms;
+    -ms-transition: ease-in-out 150ms;
+    -o-transition: ease-in-out 150ms;
+}
+
+.card:hover {
+    background-color: var(--yellow1);
+    cursor: pointer;
+    transform: scale(103%);
+    -webkit-transform: scale(103%);
+    -moz-transform: scale(103%);
+    -ms-transform: scale(103%);
+    -o-transform: scale(103%);
 }
 
 .score-card {
@@ -52,11 +66,8 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 2ch;
-    /* max-width: 28%; */
-    /* height: auto; */
     max-height: 9ch;
     min-width: 15ch;
-    /* overflow: auto; */
     padding: 3ch 4ch;
     margin: 1.5ch;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
@@ -65,7 +76,6 @@ body {
 .score-card-grid {
     display: flex;
     flex-wrap: wrap;
-    /* padding: 0 30ch 0 30ch; */
     align-items: center;
     justify-content: center;
 }
@@ -82,17 +92,17 @@ body {
     background-color: var(--green1);
 }
 
-.navbar {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-items: center;
     align-content: center;
-    width: 100%;
-    padding: 0 31ch 0 31ch;
+    width: 70%;
+    /* padding: 0 31ch 0 31ch; */
 }
 
-.navbar div span {
+.header div span {
     font-size: 5ch;
     font-weight: 800;
 }
@@ -101,12 +111,16 @@ body {
     color: var(--green1);
     /* font-family: 'Krona One', sans-serif; */
     font-family: 'Comfortaa', cursive;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
 }
 
 .O {
     color: var(--yellow1);
     /* font-family: 'Krona One', sans-serif; */
     font-family: 'Comfortaa', cursive;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
 }
 
 .X-small {
@@ -134,8 +148,11 @@ body {
     -moz-border-radius: 1ch;
     -ms-border-radius: 1ch;
     -o-border-radius: 1ch;
-    padding: 0.25ch 4ch;
+    width: 15ch;
+    padding: 0.25ch;
     color: var(--grey1);
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
 }
 
 .rodada-div {
@@ -146,6 +163,27 @@ body {
     width: 100%;
 }
 
-.navbar p {
+.header p {
     margin: 0 !important;
+}
+
+.restart-button {
+    background-color: var(--grey1);
+    border-color: transparent;
+    border-radius: 0.66ch;
+    -webkit-border-radius: 0.66ch;
+    -moz-border-radius: 0.66ch;
+    -ms-border-radius: 0.66ch;
+    -o-border-radius: 0.66ch;
+    height: auto;
+    width: 3ch;
+    color: var(--dark2);
+    font-size: 2ch;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
 }
