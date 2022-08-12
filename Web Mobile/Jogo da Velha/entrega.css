@@ -9,7 +9,8 @@
 body {
     background-color: var(--dark);
     color: var(--dark);
-    font-family: 'Coda', cursive;
+    /* font-family: 'Coda', cursive; */
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -66,9 +67,9 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 2ch;
-    max-height: 9ch;
+    max-height: 8ch;
     min-width: 15ch;
-    padding: 3ch 4ch;
+    padding: 2ch 4ch;
     margin: 1.5ch;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
 }
@@ -109,7 +110,7 @@ body {
     filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     font-size: 4ch;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .O {
@@ -119,7 +120,7 @@ body {
     filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     font-size: 4ch;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .X-small {
@@ -127,7 +128,7 @@ body {
     font-family: 'Comfortaa', cursive;
     font-size: 2.5ch !important;
     display: inline-block;
-    line-height: 1.66ch !important;
+    /* line-height: 1.66ch !important; */
 }
 
 .O-small {
@@ -135,13 +136,12 @@ body {
     font-family: 'Comfortaa', cursive;
     font-size: 2.5ch !important;
     display: inline-block;
-    line-height: 1.66ch !important;
+    /* line-height: 1.66ch !important; */
 }
 
-
-/* h3 {
-    font-weight: 400;
-} */
+h3 {
+    font-weight: 900;
+}
 
 .rodada {
     background-color: var(--dark2);
@@ -152,7 +152,8 @@ body {
     -ms-border-radius: 0.66ch;
     -o-border-radius: 0.66ch;
     width: 15ch;
-    padding: 0.75ch;
+    height: 2.5ch;
+    padding: 1.5ch;
     color: var(--grey1);
     filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
     -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
