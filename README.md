@@ -67,7 +67,9 @@
 <!-- <br> -->
 <center>
     <p align="center">
-        <h4 align="center">NÃO SEJAM BURROS E TOMEM CÓDIGO DE ÉTICA</h4>
+        <a target="_blank" href="https://www.mackenzie.br/fileadmin/ARQUIVOS/Public/8-ead/graduacao/2022/1_SEMESTRE/DOCUMENTOS/COMUNICADOS/Guia_Trabalhos_Academicos.pdf">
+            <h4 align="center" style="text-decoration: underline;">NÃO SEJAM BURROS</h4>
+        </a>
     </p>
 </center>
 
