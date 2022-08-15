@@ -22,42 +22,42 @@
                 <td>Fundamentos de Sistemas de Informação</td>
                 <td>1°</td>
                 <td>
-                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Fundamentos%20de%20SI">Link</a>
+                    <a target="_blank" href="https://github.com/gtkacz/Mackenzie/tree/master/Fundamentos%20de%20SI">Link</a>
                 </td>
             </tr>
             <tr>
                 <td>Ética e Cidadania</td>
                 <td>1°</td>
                 <td>
-                    <a href="">Link</a>
+                    <a target="_blank" href="">Link</a>
                 </td>
             </tr>
             <tr>
                 <td>Ciência, Tecnologia e Matemática na Sociedade</td>
                 <td>1°</td>
                 <td>
-                    <a href="">Link</a>
+                    <a target="_blank" href="">Link</a>
                 </td>
             </tr>
             <tr>
                 <td>Web Mobile</td>
                 <td>2°</td>
                 <td>
-                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Web%20Mobile">Link</a>
+                    <a target="_blank" href="https://github.com/gtkacz/Mackenzie/tree/master/Web%20Mobile">Link</a>
                 </td>
             </tr>
             <tr>
                 <td>Introdução a Sistemas Operacionais</td>
                 <td>2°</td>
                 <td>
-                    <a href="">Link</a>
+                    <a target="_blank" href="">Link</a>
                 </td>
             </tr>
             <tr>
                 <td>Desenvolvimento de Sistemas I</td>
                 <td>2°</td>
                 <td>
-                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Desenvolvimento%20de%20Sistemas%20I">Link</a>
+                    <a target="_blank" href="https://github.com/gtkacz/Mackenzie/tree/master/Desenvolvimento%20de%20Sistemas%20I">Link</a>
                 </td>
             </tr>
         </table>
