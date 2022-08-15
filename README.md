@@ -21,32 +21,44 @@
             <tr>
                 <td>Fundamentos de Sistemas de Informação</td>
                 <td>1°</td>
-                <td>Primary</td>
+                <td>
+                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Fundamentos%20de%20SI">Link</a>
+                </td>
             </tr>
             <tr>
                 <td>Ética e Cidadania</td>
                 <td>1°</td>
-                <td>Primary</td>
+                <td>
+                    <a href="">Link</a>
+                </td>
             </tr>
             <tr>
                 <td>Ciência, Tecnologia e Matemática na Sociedade</td>
                 <td>1°</td>
-                <td>Primary</td>
+                <td>
+                    <a href="">Link</a>
+                </td>
             </tr>
             <tr>
                 <td>Web Mobile</td>
                 <td>2°</td>
-                <td>-</td>
+                <td>
+                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Web%20Mobile">Link</a>
+                </td>
             </tr>
             <tr>
                 <td>Introdução a Sistemas Operacionais</td>
                 <td>2°</td>
-                <td>-</td>
+                <td>
+                    <a href="">Link</a>
+                </td>
             </tr>
             <tr>
                 <td>Desenvolvimento de Sistemas I</td>
                 <td>2°</td>
-                <td>-</td>
+                <td>
+                    <a href="https://github.com/gtkacz/Mackenzie/tree/master/Desenvolvimento%20de%20Sistemas%20I">Link</a>
+                </td>
             </tr>
         </table>
     </center>
@@ -55,7 +67,7 @@
 <!-- <br> -->
 <center>
     <p align="center">
-        <h4>NÃO SEJAM BURROS E TOMEM CÓDIGO DE ÉTICA</h4>
+        <h4 align="center">NÃO SEJAM BURROS E TOMEM CÓDIGO DE ÉTICA</h4>
     </p>
 </center>
 
