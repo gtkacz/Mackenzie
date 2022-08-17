@@ -1,0 +1,58 @@
+:root{
+    --orange1: #E28525;
+    --gray1: #016972;
+    --black1: #00403F;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container{
+    background-color: transparent;
+    min-width: 66%;
+    max-width: 90%;
+    display: flex;
+}
+
+.card{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4ch;
+    width: 33%;
+}
+
+.icon{
+    font-size: 2ch;
+}
+
+.car-title{
+    font-size: 3ch;
+}
+
+.car-description{
+    font-size: 1ch;
+}
+
+.sedan{
+    background-color: var(--orange1);
+}
+.suv{
+    background-color: var(--gray1);
+}
+.luxury{
+    background-color: var(--black1);
+}
+
+.but{
+    border-radius: 50%;
+    background-color: transparent;
+    width: 50%;
+}
