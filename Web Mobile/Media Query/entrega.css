@@ -1,0 +1,144 @@
+:root{
+    --orange1: #E28525;
+    --gray1: #016972;
+    --black1: #00403F;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+
+body *{
+    color: white;
+    cursor: default;
+}
+
+.container{
+    background-color: transparent;
+    width: 66%;
+    display: flex;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 6ch 4.5ch;
+    width: 33%;
+    transition: ease-in-out 150ms;
+}
+
+.card:hover{
+    box-shadow: inset 0 0 2ch rgba(0, 0, 0, 0.25);
+}
+
+.icon{
+    width: 8ch;
+}
+
+.car-title{
+    font-size: 5ch;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    margin: 1.25ch 0 0.25ch 0;
+}
+
+.car-description{
+    font-size: 2.25ch;
+    max-width: 75%;
+}
+
+.sedan{
+    background-color: var(--orange1);
+    border-radius: 1ch 0 0 1ch;
+}
+.suv{
+    background-color: var(--gray1);
+}
+.luxury{
+    background-color: var(--black1);
+    border-radius: 0 1ch 1ch 0;
+}
+
+.but{
+    border-radius: 3ch;
+    background-color: transparent;
+    width: 50%;
+    padding: 1.5ch 0.5ch;
+    outline: 0;
+    margin-top: 7ch;
+    border-color: white;
+    transition: ease-in-out 150ms;
+    text-decoration: none;
+    border-style: solid;
+    font-size: 1.75ch;
+}
+
+.but:active{
+    background-color: rgba(255, 255, 255, 1) !important;
+    text-decoration: none;
+}
+
+.but:hover{
+    /* background-color: rgba(255, 255, 255, 0.25); */
+    box-shadow: inset 0 0 3ch rgba(255, 255, 255, 0.25);
+}
+
+.sedan .but:active{
+    color: var(--orange1);
+}
+.suv .but:active{
+    color: var(--gray1);
+}
+.luxury .but:active{
+    color: var(--black1);
+}
+
+@media only screen and (max-width: 800px){
+    body {
+        align-items: flex-start;
+    }
+
+    .container{
+        width: 95%;
+        flex-wrap: wrap;
+        margin: 10ch 0;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .icon{
+        width: 10ch;
+    }
+
+    .car-title{
+        font-size: 6ch;
+        margin-top: 1.25ch;
+    }
+
+    .car-description{
+        font-size: 2.75ch;
+        max-width: 90%;
+    }
+
+    .but{
+        font-size: 2ch;
+        margin-top: 2ch;
+    }
+
+    .sedan{
+        border-radius: 1ch 1ch 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 1ch 1ch;
+    }
+}
