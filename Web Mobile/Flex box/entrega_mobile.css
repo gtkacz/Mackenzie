@@ -4,11 +4,15 @@
     --black1: #00403F;
 }
 
+html{
+    overflow: auto;
+}
+
 body{
     background-color: white;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     color: white;
     font-family: 'Abel', sans-serif;
@@ -20,8 +24,9 @@ body *{
 
 .container{
     background-color: transparent;
-    width: 66%;
+    width: 95%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -29,7 +34,7 @@ body *{
     flex-direction: column;
     justify-content: space-around;
     padding: 6ch 4.5ch;
-    width: 33%;
+    width: 100%;
 }
 
 .icon{
@@ -45,19 +50,19 @@ body *{
 
 .car-description{
     font-size: 2.25ch;
-    max-width: 75%;
+    max-width: 66%;
 }
 
 .sedan{
     background-color: var(--orange1);
-    border-radius: 1ch 0 0 1ch;
+    border-radius: 1ch 1ch 0 0;
 }
 .suv{
     background-color: var(--gray1);
 }
 .luxury{
     background-color: var(--black1);
-    border-radius: 0 1ch 1ch 0;
+    border-radius: 0 0 1ch 1ch;
 }
 
 .but{
