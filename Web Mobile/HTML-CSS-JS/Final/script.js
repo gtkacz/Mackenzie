@@ -4,6 +4,7 @@ const player1 = 'o';
 const player2 = 'x';
 const vazio = '';
 let ganhou = false;
+let ganhador = '';
 
 let jogador = player1;
 let tabuleiro =
@@ -19,14 +20,18 @@ function reset() {
     cell.innerHTML = '';
     tabuleiro[i] = vazio
   }
+  updateRound();
 }
 
 function gameOver(type) {
   if (type === 'ganhou'){
-    alert('ganhou');
+    jogador = (jogador === player1) ? player2 : player1;
+    alert(`${jogador.toUpperCase()} ganhou`);
+    updateScore('winner');
   }
   else if (type === 'empate'){
     alert('empate');
+    updateScore('tie');
   }
   ganhou = true;
 } 
@@ -69,6 +74,10 @@ function jogada(numero) {
     verificaGanhador();
   }
 
+  updateRound();
+}
+
+function updateRound(){
   let rodada = document.getElementById('rodada').innerHTML;
   let update = getNextPlayer(rodada);
   let newPlayer = update[0];
@@ -86,5 +95,18 @@ function getNextPlayer(phrase){
   }
   else {
     return ['X', 'O']
+  }
+}
+
+function updateScore(type){
+  if (type === 'tie'){
+    let cell = document.getElementById('tie-score');
+    let counter = cell.innerHTML+1;
+    cell.innerHTML = counter;
+  }
+  else{
+    let cell = document.getElementById(`${jogador}-score`);
+    let counter = Number(cell.innerHTML)+1;
+    cell.innerHTML = counter;
   }
 }

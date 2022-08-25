@@ -20,7 +20,7 @@
           <img src="o.svg" alt="jogador O" />
         </div>
       </div>
-      <div id="rodada" class="cell round-label">O RODADA
+      <div id="rodada" class="cell round-label">X RODADA
       </div>
       <div class="cell reset">
         <button onclick="reset()">
@@ -50,15 +50,15 @@
     <footer>
       <div class="footer-item win-container">
         <label>X (você)</label>
-        <div class="total-number">0</div>
+        <div class="total-number" id="x-score">0</div>
       </div>
       <div class="footer-item ties-container">
         <label>EMPATES</label>
-        <div class="total-number">0</div>
+        <div class="total-number" id="tie-score">0</div>
       </div>
       <div class="footer-item cpu-container">
         <label>O (CPU)</label>
-        <div class="total-number">0</div>
+        <div class="total-number" id="o-score">0</div>
       </div>
     </footer>
   </div>
