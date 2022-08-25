@@ -30,7 +30,7 @@ function gameOver(type) {
     updateScore('winner');
   }
   else if (type === 'empate'){
-    alert('empate');
+    alert('Empate');
     updateScore('tie');
   }
   ganhou = true;
@@ -55,6 +55,10 @@ function verificaGanhador() {
       tabuleiro[i] === tabuleiro[i+3] && tabuleiro[i] === tabuleiro[i+6]) {
       gameOver('ganhou');
     }
+  }
+
+  if (!tabuleiro.includes(vazio)){
+    gameOver('empate');
   }
 }
 
@@ -88,7 +92,6 @@ function updateRound(){
 
 function getNextPlayer(phrase){
   let oldPlayer = phrase.split(' ')[0];
-  console.log(oldPlayer)
 
   if (oldPlayer === 'X'){
     return ['O', 'X']
@@ -101,7 +104,7 @@ function getNextPlayer(phrase){
 function updateScore(type){
   if (type === 'tie'){
     let cell = document.getElementById('tie-score');
-    let counter = cell.innerHTML+1;
+    let counter = Number(cell.innerHTML)+1;
     cell.innerHTML = counter;
   }
   else{
