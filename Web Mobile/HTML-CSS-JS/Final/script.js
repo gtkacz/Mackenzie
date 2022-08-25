@@ -44,6 +44,13 @@ function verificaGanhador() {
       gameOver('ganhou');
     }
   }
+
+  for (let i = 0; i < 3; i++) {
+    if (tabuleiro[i] !== vazio &&
+      tabuleiro[i] === tabuleiro[i+3] && tabuleiro[i] === tabuleiro[i+6]) {
+      gameOver('ganhou');
+    }
+  }
 }
 
 function jogada(numero) {
@@ -62,11 +69,22 @@ function jogada(numero) {
     verificaGanhador();
   }
 
+  let rodada = document.getElementById('rodada').innerHTML;
+  let update = getNextPlayer(rodada);
+  let newPlayer = update[0];
+  let oldPlayer = update[1];
+  let result = rodada.replace(oldPlayer, newPlayer);
+  document.getElementById('rodada').innerHTML = result;
 }
 
+function getNextPlayer(phrase){
+  let oldPlayer = phrase.split(' ')[0];
+  console.log(oldPlayer)
 
-
-
-
-
-
+  if (oldPlayer === 'X'){
+    return ['O', 'X']
+  }
+  else {
+    return ['X', 'O']
+  }
+}
