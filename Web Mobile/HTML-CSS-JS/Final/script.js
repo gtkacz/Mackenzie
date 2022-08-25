@@ -23,10 +23,10 @@ function reset() {
   updateRound();
 }
 
-function gameOver(type) {
+function gameOver(type, play) {
   if (type === 'ganhou'){
     jogador = (jogador === player1) ? player2 : player1;
-    alert(`${jogador.toUpperCase()} ganhou`);
+    alert(`${jogador.toUpperCase()} ganhou na ${play}`);
     updateScore('winner');
   }
   else if (type === 'empate'){
@@ -40,25 +40,25 @@ function verificaGanhador() {
   if ((tabuleiro[0] !== vazio &&
     tabuleiro[0] === tabuleiro[4] && tabuleiro[0] === tabuleiro[8]) || (tabuleiro[2] !== vazio &&
       tabuleiro[2] === tabuleiro[4] && tabuleiro[2] === tabuleiro[6])) {
-    gameOver('ganhou');
+    gameOver('ganhou', 'diagonal');
   }
 
   for (let i = 0; i < 9; i+=3) {
     if (tabuleiro[0+i] !== vazio &&
       tabuleiro[0+i] === tabuleiro[1+i] && tabuleiro[0+i] === tabuleiro[2+i]) {
-      gameOver('ganhou');
+      gameOver('ganhou', 'horizontal');
     }
   }
 
   for (let i = 0; i < 3; i++) {
     if (tabuleiro[i] !== vazio &&
       tabuleiro[i] === tabuleiro[i+3] && tabuleiro[i] === tabuleiro[i+6]) {
-      gameOver('ganhou');
+      gameOver('ganhou', 'vertical');
     }
   }
 
   if (!tabuleiro.includes(vazio) && !ganhou){
-    gameOver('empate');
+    gameOver('empate', '');
   }
 }
 
