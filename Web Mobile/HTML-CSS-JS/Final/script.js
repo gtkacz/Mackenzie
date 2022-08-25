@@ -64,7 +64,7 @@ function verificaGanhador() {
 
 function jogada(numero) {
   if (ganhou === true) {
-    alert("O Jogo acabou");
+    alert("O jogo acabou");
     return;
   }
 
@@ -101,6 +101,7 @@ function cpuPlay(){
     }
   }
   verificaGanhador();
+  updateRound();
 }
 
 function updateRound(){
