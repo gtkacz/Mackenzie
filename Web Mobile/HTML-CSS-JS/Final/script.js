@@ -57,7 +57,7 @@ function verificaGanhador() {
     }
   }
 
-  if (!tabuleiro.includes(vazio)){
+  if (!tabuleiro.includes(vazio) && !ganhou){
     gameOver('empate');
   }
 }
@@ -87,10 +87,15 @@ function jogada(numero) {
   updateRound();
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function cpuPlay(){
   while (true){
-    let emptyCounter = tabuleiro.filter(x => x==vazio).length;
-    let randomPlay = Math.floor(Math.random() * emptyCounter);
+    let randomPlay = getRandomInt(0, 8);
     let cell = document.getElementById(`celula_${randomPlay}`);
   
     if (tabuleiro[randomPlay] === vazio) {
