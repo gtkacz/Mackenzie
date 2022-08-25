@@ -6,14 +6,14 @@ const vazio = '';
 let ganhou = false;
 let ganhador = '';
 
-let jogador = player1;
+let jogador = player2;
 let tabuleiro =
   [vazio, vazio, vazio,
     vazio, vazio, vazio,
     vazio, vazio, vazio];
 
 function reset() {
-  jogador = player1;
+  jogador = player2;
   ganhou = false;
   for (let i = 0; i < 9; i++) {
     let cell = document.getElementById(`celula_${i}`);
@@ -70,15 +70,37 @@ function jogada(numero) {
 
   let cell = document.getElementById(`celula_${numero}`);
 
-  if (tabuleiro[numero] === vazio) {
-    cell.innerHTML = `<img src="${jogador}.svg" alt='jogador ${jogador}' />`;
-    tabuleiro[numero] = jogador;
-    jogador = (jogador === player1) ? player2 : player1;
+  if (jogador === 'x'){
+    if (tabuleiro[numero] === vazio) {
+      cell.innerHTML = `<img src="${jogador}.svg" alt='jogador ${jogador}' />`;
+      tabuleiro[numero] = jogador;
+      jogador = (jogador === player1) ? player2 : player1;
 
-    verificaGanhador();
+      verificaGanhador();
+      
+      if (!ganhou){
+        cpuPlay();
+      }
+    }
   }
 
   updateRound();
+}
+
+function cpuPlay(){
+  while (true){
+    let emptyCounter = tabuleiro.filter(x => x==vazio).length;
+    let randomPlay = Math.floor(Math.random() * emptyCounter);
+    let cell = document.getElementById(`celula_${randomPlay}`);
+  
+    if (tabuleiro[randomPlay] === vazio) {
+      cell.innerHTML = `<img src="${jogador}.svg" alt='jogador ${jogador}' />`;
+      tabuleiro[randomPlay] = jogador;
+      jogador = (jogador === player1) ? player2 : player1;
+      break;
+    }
+  }
+  verificaGanhador();
 }
 
 function updateRound(){
