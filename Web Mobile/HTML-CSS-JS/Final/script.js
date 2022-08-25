@@ -41,12 +41,14 @@ function verificaGanhador() {
     tabuleiro[0] === tabuleiro[4] && tabuleiro[0] === tabuleiro[8]) || (tabuleiro[2] !== vazio &&
       tabuleiro[2] === tabuleiro[4] && tabuleiro[2] === tabuleiro[6])) {
     gameOver('ganhou', 'diagonal');
+    return;
   }
 
   for (let i = 0; i < 9; i+=3) {
     if (tabuleiro[0+i] !== vazio &&
       tabuleiro[0+i] === tabuleiro[1+i] && tabuleiro[0+i] === tabuleiro[2+i]) {
       gameOver('ganhou', 'horizontal');
+      return;
     }
   }
 
@@ -54,11 +56,13 @@ function verificaGanhador() {
     if (tabuleiro[i] !== vazio &&
       tabuleiro[i] === tabuleiro[i+3] && tabuleiro[i] === tabuleiro[i+6]) {
       gameOver('ganhou', 'vertical');
+      return;
     }
   }
 
   if (!tabuleiro.includes(vazio) && !ganhou){
     gameOver('empate', '');
+    return;
   }
 }
 
