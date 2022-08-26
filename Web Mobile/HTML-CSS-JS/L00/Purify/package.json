@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "purgecss": "^4.1.3",
+    "purify-css": "^1.2.5"
+  }
+}

@@ -1,0 +1,213 @@
+:root {
+    --dark: #192A32;
+    --dark2: #1D3842;
+    --yellow1: #EEAF34;
+    --green1: #2DC2C0;
+    --grey1: #A7BDC9;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--dark);
+    /* font-family: 'Coda', cursive; */
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    margin-top: 5ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75ch;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 25ch 0 25ch; */
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3ch;
+    max-width: 33%;
+    height: auto;
+    padding: 8ch;
+    margin: 2ch 1ch;
+    background-color: var(--dark2);
+    filter: drop-shadow( 1px 1px 3px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow( 1px 1px 3px rgba(0, 0, 0, 0.5));
+    transition: ease-in-out 150ms;
+    -webkit-transition: ease-in-out 150ms;
+    -moz-transition: ease-in-out 150ms;
+    -ms-transition: ease-in-out 150ms;
+    -o-transition: ease-in-out 150ms;
+}
+
+.card:hover {
+    background-color: var(--green1);
+    cursor: pointer;
+    transform: scale(103%);
+    -webkit-transform: scale(103%);
+    -moz-transform: scale(103%);
+    -ms-transform: scale(103%);
+    -o-transform: scale(103%);
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2ch;
+    max-height: 8ch;
+    min-width: 15ch;
+    padding: 2ch 4ch;
+    margin: 1.5ch;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+.score-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-yellow {
+    background-color: var(--yellow1);
+}
+
+.score-grey {
+    background-color: var(--grey1);
+}
+
+.score-green {
+    background-color: var(--green1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 70%;
+    /* padding: 0 31ch 0 31ch; */
+}
+
+.X {
+    color: var(--green1);
+    /* font-family: 'Krona One', sans-serif; */
+    font-family: 'Comfortaa', cursive;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    font-size: 4ch;
+    font-weight: 900;
+}
+
+.O {
+    color: var(--yellow1);
+    /* font-family: 'Krona One', sans-serif; */
+    font-family: 'Comfortaa', cursive;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    font-size: 4ch;
+    font-weight: 900;
+}
+
+.X-small {
+    color: var(--grey1);
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5ch !important;
+    display: inline-block;
+    /* line-height: 1.66ch !important; */
+}
+
+.O-small {
+    color: var(--grey1);
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5ch !important;
+    display: inline-block;
+    /* line-height: 1.66ch !important; */
+}
+
+h3 {
+    font-weight: 900;
+}
+
+.rodada {
+    background-color: var(--dark2);
+    border-color: transparent;
+    border-radius: 0.66ch;
+    -webkit-border-radius: 0.66ch;
+    -moz-border-radius: 0.66ch;
+    -ms-border-radius: 0.66ch;
+    -o-border-radius: 0.66ch;
+    width: 15ch;
+    height: 2.5ch;
+    padding: 2ch;
+    color: var(--grey1);
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    justify-content: space-around;
+    justify-items: center !important;
+}
+
+.header p {
+    margin: 0 !important;
+}
+
+.restart-button {
+    background-color: var(--grey1);
+    border-color: transparent;
+    border-radius: 0.66ch;
+    -webkit-border-radius: 0.66ch;
+    -moz-border-radius: 0.66ch;
+    -ms-border-radius: 0.66ch;
+    -o-border-radius: 0.66ch;
+    height: auto;
+    width: 3ch;
+    color: var(--dark2);
+    font-size: 2ch;
+    filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, 0.25));
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.rodada p {
+    display: inline-block;
+    line-height: 1.5ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+}
+
+.score-card:hover {
+    cursor: default;
+}
+
+button:focus {
+    outline-color: transparent;
+    outline: 0;
+}
