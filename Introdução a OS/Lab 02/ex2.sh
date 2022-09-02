@@ -13,5 +13,7 @@ echo "Insira seu nome: "
 read nome
 echo "Insira o valor de x: "
 read xvar
+threex=3*$xvar
+echo $threex
 echo ""
-echo "`expr $nome`, com o valor de x = `expr $xvar` a função y = 3x - 1 retorna o valor de `expr $xvar * 3`"
+echo "$nome, com o valor de x = $xvar a função y = 3x - 1 retorna o valor de `expr $threex - 1`"
