@@ -91,7 +91,7 @@ small {
     -o-transition: background ease-in-out 250ms;
 }
 
-.active .card-header:hover {
+.active:hover .card-header {
     /* background: linear-gradient(270deg, #D6768F 0%, #4999DA 100%); */
     background-position: 34ch;
 }
