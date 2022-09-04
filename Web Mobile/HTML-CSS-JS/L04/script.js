@@ -3,7 +3,6 @@ const url = "https://mack-webmobile.vercel.app/api/users";
 async function getEmployees() {
     const response = await fetch(url);
     const employees = await response.json();
-    console.log(employees[0])
 
     createCardRows(employees);
 }
@@ -44,13 +43,13 @@ function createNewCard(employee) {
 
     html += `<main class="card-content">`;
 
-    html += `<section class="content-header"><span class="person">${(employee.name).toUpperCase()}</span><small>${employee.email}</small></section>`;
+    html += `<section class="content-header"><span class="person">${(employee.name).toUpperCase()}</span><small><a href="mailto:${employee.email}">${employee.email}</a></small></section>`;
 
     html += `<section class="content-grid">`;
 
-    html += `<div class="content-line"><span>Salário: <b>R$ ${thousandSeparator(employee.salary)}</b></span><img src="images/edit.png" class="icon"></div>`;
+    html += `<div class="content-line"><span>Salário: <b>R$ ${numberToMoney(employee.salary)}</b></span><img src="images/edit.png" class="icon"></div>`;
 
-    html += `<div class="content-line"><span>Aniversário: <b>${employee.date}</b></span><img src="images/delete.png" class="icon"></div>`;
+    html += `<div class="content-line"><span>Aniversário: <b>${stringToBrazilianDate(employee.date)}</b></span><img src="images/delete.png" class="icon"></div>`;
 
     html += `</section>`;
 
@@ -62,8 +61,13 @@ function createNewCard(employee) {
     return html;
 }
 
-function thousandSeparator(x) {
+function numberToMoney(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+}
+
+function stringToBrazilianDate(x) {
+    let dateObject = new Date(x);
+    return (dateObject.toLocaleDateString('pt-BR'));
 }
 
 getEmployees();

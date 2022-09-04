@@ -53,6 +53,19 @@ small {
     height: 40ch;
     position: relative;
     margin-bottom: var(--margem);
+    transition: ease-in-out 200ms;
+    -webkit-transition: ease-in-out 200ms;
+    -moz-transition: ease-in-out 200ms;
+    -ms-transition: ease-in-out 200ms;
+    -o-transition: ease-in-out 200ms;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 .card-header {
@@ -139,5 +152,6 @@ small {
 .content-line {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 2.25ch 2ch 0ch 2ch;
 }
