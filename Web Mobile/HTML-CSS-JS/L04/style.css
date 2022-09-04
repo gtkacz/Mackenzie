@@ -1,6 +1,7 @@
 :root {
     --borda: 5ch;
     --margem: 5ch;
+    --inativo: #979797;
 }
 
 html * {
@@ -51,6 +52,7 @@ small {
     -o-border-radius: var(--borda);
     height: 40ch;
     position: relative;
+    margin-bottom: var(--margem);
 }
 
 .card-header {
@@ -71,13 +73,13 @@ small {
 }
 
 .inactive .card-header {
-    background: #979797;
+    background: var(--inativo);
 }
 
 .inactive .card-header .avatar,
 .inactive .divider {
-    filter: #979797;
-    -webkit-filter: #979797;
+    filter: var(--inativo);
+    -webkit-filter: var(--inativo);
     filter: grayscale(1);
 }
 
@@ -116,6 +118,7 @@ small {
 
 .icon {
     width: 2ch;
+    margin-right: 1ch;
 }
 
 .icon:hover {

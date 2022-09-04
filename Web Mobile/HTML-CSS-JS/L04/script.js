@@ -44,7 +44,7 @@ function createNewCard(employee) {
 
     html += `<main class="card-content">`;
 
-    html += `<section class="content-header"><span class="person">${employee.name}</span><small>${employee.email}</small></section>`;
+    html += `<section class="content-header"><span class="person">${(employee.name).toUpperCase()}</span><small>${employee.email}</small></section>`;
 
     html += `<section class="content-grid">`;
 
