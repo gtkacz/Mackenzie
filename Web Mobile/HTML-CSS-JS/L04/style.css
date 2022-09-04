@@ -60,7 +60,7 @@ small {
     -o-transition: ease-in-out 200ms;
 }
 
-.card:hover {
+.active:hover {
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -91,7 +91,7 @@ small {
     -o-transition: background ease-in-out 250ms;
 }
 
-.card-header:hover {
+.active .card-header:hover {
     /* background: linear-gradient(270deg, #D6768F 0%, #4999DA 100%); */
     background-position: 34ch;
 }
