@@ -1,5 +1,6 @@
 :root {
     --borda: 5ch;
+    --margem: 5ch;
 }
 
 html * {
@@ -10,7 +11,7 @@ body {
     background: linear-gradient(90deg, #EEEEEE 0%, #FFFFFF 100%);
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -25,13 +26,14 @@ small {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: var(--margem) 0ch 0ch var(--margem);
 }
 
 .card-row {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin: 0ch 5ch 0ch 5ch;
+    margin: 0ch var(--margem) 0ch var(--margem);
 }
 
 .card {
