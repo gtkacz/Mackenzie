@@ -35,10 +35,10 @@ function createCardRows(employees) {
 }
 
 function createNewCard(employee) {
-    let html = `<div class="card" id="${employee._id}">`;
+    let html = `<div class="card ${(employee.status).toLowerCase()}" id="${employee._id}">`;
 
 
-    html += `<header class="card-header"><img src="${employee.avatar}" class="avatar"></header>`;
+    html += `<header class="card-header"><img src="${employee.avatar}" alt="${employee.name}" title="${employee.name}" class="avatar"></header>`;
 
     html += `<img src="images/divider.png" class="divider">`;
 

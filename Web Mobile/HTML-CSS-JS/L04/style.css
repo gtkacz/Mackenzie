@@ -70,6 +70,17 @@ small {
     top: 0;
 }
 
+.inactive .card-header {
+    background: #979797;
+}
+
+.inactive .card-header .avatar,
+.inactive .divider {
+    filter: #979797;
+    -webkit-filter: #979797;
+    filter: grayscale(1);
+}
+
 .avatar {
     border-radius: 50%;
     -webkit-border-radius: 50%;
