@@ -1,0 +1,122 @@
+Arquitetura de Sistema Operacionais – Machado/Maia 
+4
+a 
+Edição – Editora LTC 
+Extração do Capítulo 5 – Gerência de Processos 
+Laboratório com o Simulador SOsim 
+ 
+ 
+Atividade 1: Criação de Processos 
+a) Práticas de simulação 
+Execute o simulador SOsim e identifique as quatro janelas que são abertas na inicialização. 
+Crie um processo: janela Gerência de Processos / Criar – janela Criação de Processos / Criar. 
+b) Análise Prática 
+Na janela Gerência de Processos, observe algumas informações sobre o contexto de software do processo como 
+PID, prioridade, estado do processo e tempo de processador. 
+Na janela Gerência de Processador, observe o processo transicionando entre estados. 
+Na janela Gerência de Processador, movimente a barra de Clock de UCP e observe as variações ocorridas. 
+c) Questão teórica para responder com a ajuda do simulador 
+Com base na observação do comportamento do processo criado, identifique se o processo é I/O-bound ou CPU-
+bound? Justifique a resposta. 
+ Resposta: o processo criado é do tipo CPU-bound, pois o mesmo alterna entre os estados de 
+pronto (fila de prontos) e de execução. Processos do tipo I/O bound estão em constante estado 
+de espera. 
+ 
+Atividade 2: Tipos de Processos 
+a) Práticas de simulação 
+Reinicialize o simulador. 
+Crie um processo do tipo CPU-bound: janela Gerência de Processos / Criar – janela Criação de Processos / Criar 
+(tipo de processo deve ser CPU-bound). 
+Crie outro processo do tipo I/O-bound: janela Gerência de Processos / Cria – janela Criação de Processos / Criar 
+(tipo de processo deve ser I/O-bound). 
+b) Análise Prática 
+Na janela Gerência de Processos, observe as mudanças de estado dos dois processos. 
+Na janela Gerência de Processador, observe o comportamento dos processos e as mudanças de contexto em função 
+do tipo I/O-bound e CPU-bound. 
+Na janela Gerência de Processos, compare a taxa de crescimento do tempo de processador dos dois processos. 
+c) Questão teórica para responder com a ajuda do simulador 
+Analise os efeitos gerados no caso de redução do tempo gasto na operação de E/S pelo processo I/O-bound. 
+ Resposta: com a redução do tempo gasto na operação de E/S (Gerência do Processador – 
+Tempo de espera de I/O) pelo processo de I/O-bound os tempos de UCP serão os mesmos 
+entre os dois processos criados (tanto de CPU como I/O bound). Neste caso temos o processo 
+do tipo CPU-bound mudando de contexto entre os estados Pronto/Execução e o processo I/Obound 
+mudando de contexto entre os estados Pronto/Execução/Espera. 
+ 
+Atividade 3: PCB 
+a) Práticas de simulação 
+Reinicialize o simulador. 
+Crie dois novos processos: janela Gerência de Processos / Criar – janela Criação de Processos / Criar. 
+b) Análise Prática 
+Na janela Gerência de Processos / PCB, observe as informações sobre o contexto de software e hardware dos 
+processos criados. 
+c) Questão teórica para responder com a ajuda do simulador 
+Identifique quais informações do PCB são estáticas ou dinâmicas e quais fazem parte do contexto de software e do 
+contexto de hardware. 
+ Resposta: com relação as informações observadas no PCB, são estáticas: Prioridade, Tempo 
+de Criação e Frames. São informações dinâmicas do PCB: Estado, Tempo de UCP e PC. 
+Quanto ao contexto de software fazem parte: Prioridade, Estado, Tempo de Criação e Tempo 
+de UCP. No contexto de hardware estão: Frames e PC. 
+ 
+ 
+ 
+ 
+Atividade 4: Estatísticas 
+a) Práticas de simulação 
+Reinicialize o simulador. 
+Ative a janela de Estatísticas em Console SOsim / Janelas / Estatísticas. 
+Crie dois novos processos: janela Gerência de Processos / Criar – janela Criação de Processos / Criar. 
+b) Análise Prática 
+Na janela Estatísticas, observe as informações: número de processos, estados dos processos e processos 
+escalonados 
+c) Questão teórica para responder com a ajuda do simulador 
+Observe que em alguns momentos existem processos no estado de pronto porém nenhum em estado de execução. 
+Explique o porquê dessa situação. 
+ Resposta: essa situação é descrita em sistemas operacionais como troca de contexto para 
+outro processo, isso assegura que a CPU não é monopolizada por um processo somente 
+(desta forma, permite-se o suporte a multitarefa). 
+ 
+Atividade 5: Log de Execução dos Processos 
+a) Práticas de simulação 
+Reinicalize o simulador. 
+Ative a janela de Log em Console SOsim / Janelas / Log. 
+Crie dois novos processos do tipo CPU-bound: janela Gerência de Processos / Cria – janela Criação de Processos / 
+Criar (tipo de processo deve ser CPU-bound). 
+b) Análise Prática 
+Na janela Log, observe as informações sobre as mudanças de estado dos processos observando o tempo que cada 
+processo permanece nos estados de Execução e Pronto. 
+Reinicalize o simulador parametrizando com um valor de fatia de tempo diferente observe as diferenças na janela 
+Log. 
+c) Questão teórica para responder usando o simulador 
+Analise comparativamente a concorrência de dois processos CPU-bound executando em dois sistemas operacionais 
+que se diferenciam apenas pelo valor da fatia de tempo. 
+ Resposta: analisando dois processos do tipo CPU-bound com a faixa de tempo mínima para 
+execução durante 10 segundos, tem-se o primeiro processo que utiliza 02 segundos de 
+execução, o segundo processo que utiliza 03 segundos para execução enquanto a troca de 
+contexto consome 05 segundos (analise de logs do simulador). 
+Ao aumentar a fatia de tempo de CPU para 10s durante 20s no total, cada um dos processos 
+foi executado durante 09 segundos, sendo que foi gasto apenas 2s para troca de contexto. 
+Desta forma, fica claro que quanto maior a quantia de tempo destinada a execução de um 
+processo menor será o tempo gasto na troca de contexto. Na forma inversa, quanto menor a 
+fatia de tempo de UCP destinado ao processo, maior o tempo gasto na troca de contexto. 
+ 
+Atividade 6: Suspensão e Eliminação de Processos 
+a) Práticas de simulação 
+Reinicalize o simulador. 
+Crie dois novos processos: janela Gerência de Processos / Cria – janela Criação de Processos / Criar. 
+b) Análise Prática 
+Na janela Gerência de Processos, observe as informações sobre o contexto de software dos processos criados. 
+Na janela Gerência de Processador, observe a concorrência no uso do processador pelos dois processos. 
+Compare percentualmente os tempos de uso do processador entre os dois processos. 
+Suspenda temporariamente um dos processos na janela Gerência de Processos / Suspender. 
+Observe os estados dos processos, a concorrência no uso do processador e novamente compare percentualmente os 
+tempos de uso do processador entre os dois processos. 
+Libere o processo do estado de espera (suspenso) na janela Gerência de Processos / Prosseguir. 
+Elimine um dos processos na janela Gerência de Processos / Finalizar. 
+c) Questão teórica para responder com a ajuda do simulador 
+Ao se eliminar um processo em estado de suspenso, o processo não é eliminado imediatamente. Reproduza essa 
+situação no simulador e explique o porquê da situação. 
+ Resposta: ao colocar um processo no estado de suspenso o mesmo é retirado da memória 
+principal e colocado na memória virtual, desta forma não é possível eliminar um processo que 
+não se encontra na memória principal. Ao tirar este processo do estado de Suspenso (botão 
+prosseguir) o mesmo é carregado novamente em memória, para aí assim poder alternar entre 
+os demais estados (como pro exemplo ser finalizado).
