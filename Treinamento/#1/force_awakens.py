@@ -1,4 +1,4 @@
-def main():
+def main() -> str:
     row = input().split()
     shape_y = int(row[0])
     shape_x = int(row[1])
@@ -31,4 +31,4 @@ def main():
                 
     return '0 0'
 
-main()
+print(main())

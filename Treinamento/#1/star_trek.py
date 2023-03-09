@@ -1,32 +1,19 @@
-def main():
-    shape = int(input())
+import sys
+from collections import deque
+from itertools import islice
 
-    raw_content = input().split()
+def main() -> str:
+    shape = int(sys.stdin.readline())
+    content = deque(map(int, sys.stdin.readline().split()))
+    
+    is_even = deque(filter(lambda item: item % 2 == 0, content))
 
-    content = [int(x) for x in raw_content]
+    if is_even:
+        first_even = content.index(is_even[0])+1
+        sheep_before_first = len(list(filter(lambda item: item == 1, islice(content, 0, first_even))))
+        return f'{first_even} {sum(content) - ((((first_even-1)*2)+1) - sheep_before_first)}'
 
-    initial_content = tuple(content)
-
-    curr_star = 0
-
-    while True:
-        if (content[curr_star] % 2 == 0):
-            future_star = curr_star-1
-
-        else:
-            future_star = curr_star+1
-
-        content[curr_star] -= 1 if (content[curr_star] > 0) else 0
-
-        if (future_star < 0) or (future_star >= len(content)):
-            break
-
-        curr_star = future_star
-
-    star_sum = len([star_index+1 for star_index in range(len(content)) if (content[star_index] != initial_content[star_index])])
-    sheep_sum = sum(content)
-
-    return f'{star_sum} {sheep_sum}'
-
+    else:
+        return f'{shape} {sum(content) - shape}'
 
 print(main())
