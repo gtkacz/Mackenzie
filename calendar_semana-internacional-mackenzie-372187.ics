@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Company Inc//Product Application//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20230814T133000Z
+DTEND:20230818T210000Z
+DTSTAMP:20230810T115953Z
+ORGANIZER;CN=Coordenadoria de Cooperação Internacional e Interinstitucional (COI):mailto:incoming@mackenzie.br
+UID:3d13982b-3d6d-45fa-bb91-09759e312ba4
+CREATED:20230810T115953Z
+X-ALT-DESC;FMTTYPE=text/html:<br>Aqui está seu link exclusivo de acesso: https://www.even3.com.br/streaming/join?type=individual&user=gmtkacz%40gmail.com&auth=ftZLDP7sWloOYO0Qi1E8KMBLNvnPIoCsVhCyVar_Q6VQBeBs06cFecT435zshwjdk_FVrY08JoYNxl7OJ2g_DqCUYqNe84qBXttV54Dxz-qrhG1nxZQU7W2vXCXsDwlAtZ5I_ZgzP9zAe3ELi8u4RrKcKrazJ0mhQ_nPyTk6EFD0-KHYTJsPPQryN5gNlf0n6kd3F1CDCwauWKjjKevBbz0s_T4xRJA7HYZm76iluUqKtVwvjP0LQitHDFsvL6Kab6xism1NM9Tg6zGaN0YXYIAm_Mq4y_dO   <br><br><br>Página do evento: https://www.even3.com.br/evento/semana-internacional-mackenzie-372187<br><br>Fuso horário: America/Brasilia (-03:00) 
+LAST-MODIFIED:20230810T115953Z
+LOCATION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Este é um evento online
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Semana Internacional Mackenzie
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER: 30
+REPEAT: 2
+DURATION: 15
+ACTION:DISPLAY
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Semana Internacional Mackenzie
+END:VALARM
+END:VEVENT
+END:VCALENDAR
