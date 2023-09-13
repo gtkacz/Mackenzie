@@ -1,0 +1,14 @@
+```mermaid
+graph TD;
+  A((CORRETORA S/A)) -->|Informa tipos de planos existentes| B[Cliente];
+  B -->|Solicita orçamento| A;
+  B -->|Fornece dados| A;
+  A -->|Elabora proposta| B;
+  B -->|Aprova proposta| A;
+  B -->|Envia solicitação de vistoria| C[Seguradora];
+  C -->|Envia resultado da vistoria| A;
+  A -->|Envia boleto de cobrança| B;
+  A -->|Envia 1ª via da apólice| B;
+  A -->|Envia 2ª via da apólice| D[Arquivo];
+  A -->|Envia 3ª via da apólice| C;
+```
