@@ -15,6 +15,7 @@ class Point:
 @dataclass
 class Asteroid(Point):
     radius: float
+    size: str
     is_alive: bool = True
     velocity_x: int = 0
     velocity_y: int = 0
@@ -38,12 +39,11 @@ def main() -> NoReturn:
 
     asteroid_map = {'small': {'radius': randint(5, 10), 'color': (255, 0, 0)}, 'medium': {'radius': randint(10, 20), 'color': (0, 255, 0)}, 'large': {'radius': randint(20, 30), 'color': (0, 0, 255)}}
 
-    asteroids: list[tuple[Asteroid, str]] = []
+    asteroids: list[Asteroid] = []
 
     for _ in range(10):
         curr_size = choice(list(asteroid_map.keys()))
-        asteroid = Asteroid(randint(0, SCREEN_SIZE[0]-asteroid_map[curr_size]['radius']), randint(0, SCREEN_SIZE[1]-asteroid_map[curr_size]['radius']), asteroid_map[curr_size]['radius'], True, randint(-5, 5), randint(-5, 5))
-        asteroids.append((asteroid, curr_size))
+        asteroids.append(Asteroid(randint(0, SCREEN_SIZE[0]-asteroid_map[curr_size]['radius']), randint(0, SCREEN_SIZE[1]-asteroid_map[curr_size]['radius']), asteroid_map[curr_size]['radius'], curr_size, True, randint(-5, 5), randint(-5, 5)))
 
     pygame.init()
 
@@ -58,9 +58,9 @@ def main() -> NoReturn:
 
         screen.fill(BG_COLOR)
 
-        for asteroid, size in asteroids:
+        for asteroid in asteroids:
             if asteroid.is_alive:
-                color = asteroid_map[size]['color']
+                color = asteroid_map[asteroid.size]['color']
                 pygame.draw.circle(screen, color, (int(asteroid.x), int(asteroid.y)), asteroid.radius, 1)
 
                 asteroid.x += asteroid.velocity_x
@@ -77,12 +77,12 @@ def main() -> NoReturn:
 
         for i in range(len(asteroids)):
             for j in range(i + 1, len(asteroids)):
-                if (asteroids[i][0].is_alive or asteroids[j][0].is_alive) and asteroid_collision(asteroids[i][0], asteroids[j][0]):
-                    print(f'Colisão entre {asteroids[i][0]} e {asteroids[j][0]}!')
-                    asteroids[i][0].is_alive = False
-                    asteroids[j][0].is_alive = False
+                if (asteroids[i].is_alive or asteroids[j].is_alive) and asteroid_collision(asteroids[i], asteroids[j]):
+                    print(f'Colisão entre {asteroids[i]} e {asteroids[j]}!')
+                    asteroids[i].is_alive = False
+                    asteroids[j].is_alive = False
 
-        if all(not asteroid.is_alive for asteroid, _ in asteroids):
+        if all(not asteroid.is_alive for asteroid in asteroids):
             print('Todos os asteroides foram destruídos!')
             pygame.quit()
             raise SystemExit
