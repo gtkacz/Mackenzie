@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[normalem]{ulem}
+
+%\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+\usepackage{booktabs, multirow}
+
+\sloppy
+
+\title{Título do Projeto de Pesquisa que será desenvolvido durante o TCC}
+
+\author{Autor1 Sobrenome\inst{1}, Autor2 Sobrenome\inst{1}, Autor3 Sobrenome\inst{1}, \\Autor4 Sobrenome\inst{1}, Orientador\inst{1,2}}
+
+\address{Sistemas de Informação\\
+Faculdade de Computação e Informática\\
+Universidade Presbiteriana Mackenzie\\
+São Paulo -- SP -- Brasil
+\nextinstitute
+  Ciência da Computação\\
+  Faculdade de Computação e Informática\\
+  Universidade Presbiteriana Mackenzie\\
+  São Paulo -- SP -- Brasil
+  \email{\{autor1,autor2,autor3,autor4\}@mackenzista.com.br,
+  orientador@mackenzie.br}
+}
+
+\begin{document} 
+
+\maketitle
+     
+\begin{resumo} 
+  Este meta-projeto apresenta a estrutura e estilos utilizados para a elaboração do projeto de pesquisa a ser entregue na disciplina de Metodologia da Pesquisa em Computação ministrada na Faculdade de Computação e Informática (FCI) da Universidade Presbiteriana Mackenzie (UPM). O(s) autor(es) deve(m) dispor em até 10 linhas, na versão final do projeto de TCC, o resumo com o tema, objetivo da pesquisa, abordagem teórico-metodológica e resultados esperados.
+\end{resumo}
+\begin{palavraschave}
+  Três a seis unitermos separados por vírgulas.  
+\end{palavraschave}
+
+\section{Introdução}
+
+A introdução estabelece uma contextualização fundamentada do tema, assim como apresenta o problema de pesquisa (questão a ser respondida pelo TCC), o objetivo geral (meta a ser alcançada, sendo sua apresentação feita com verbo no infinitivo) e os objetivos específicos (etapas de trabalho para atingir o objetivo geral, também apresentados com verbos no infinitivo dado que traduzem ações). Além disso, trata da justificativa (elementos e referências bibliográficas que mostram a relevância da investigação, assim como contribuições decorrentes do trabalho proposto).
+
+Finalmente, ainda são dispostas a hipótese (afirmação provisória a ser confirmada/refutada durante o TCC) e a organização do documento (descrição das partes constitutivas).
+
+\section{Referencial Teórico}
+Disposição de 10-12 referências bibliográficas completas relacionadas ao tema de pesquisa (conforme o padrão da SBC de normatização científica – cuja URL de acesso se encontra na última seção deste documento, denominada de “Referências Bibliográficas”). Cada referência deve descrever, em três a cinco linhas, a justificativa da pertinência da bibliografia no contexto do estudo proposto.
+
+\section{Materiais e Métodos}
+Apresentação das etapas e dos materiais (hardwares/softwares etc.) que serão utilizados ao longo da pesquisa, assim como as justificativas pertinentes (embasadas por referências bibliográficas). Inclusive, também é necessário classificar a pesquisa conforme a natureza (básica ou aplicada), abordagem (quantitativa, qualitativa, mista ou quali-quanti), finalidade (exploratória, descritiva, explicativa, metodológica) e meio (bibliográfica, documental, estudo de caso, experimental, pesquisa de campo etc.).
+
+Cabe destacar que as imagens presentes no documento devem possuir, conforme exemplo da Figura 1, a resolução de 600dpi. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{fci.png}
+\caption{Marca da FCI-UPM}
+\end{figure}
+
+Já a listagem das referências completas que serão estudadas ao longo da pesquisa deve ser apresentada no final do documento (sendo as informações apresentadas no arquivo ``\texttt{sbc-template.bib}''. Ao longo do texto, as referências fazem uso do comando  \textbackslash\texttt{cite\{chamada-da-referência\}}, resultando, por exemplo, em \cite{boulic:91}, \cite{smith:99} e \cite{knuth:84}.
+
+\section{Cronograma}
+Disposição das etapas que serão realizadas [entregue no Projeto Parcial], bem como a duração de cada uma em meses.
+
+\begin{table}[!htp]\centering
+\caption{Cronograma para o Desenvolvimento do TCC}\label{tab: }
+\scriptsize
+\begin{tabular}{lr|r|r|r|r|r|r|r|r|r|r|rr}\toprule
+\multirow{2}{*}{\textbf{ATIVIDADE}} &\multicolumn{12}{c}{\textbf{MÊS}} \\\midrule
+&1 &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &12 \\
+Levantamento Bibliográfico Complementar & & & & & & & & & & & \\
+Atividade 2 & & & & & & & & & & & \\
+Atividade 3 & & & & & & & & & & & \\
+Atividade 4 & & & & & & & & & & & \\
+Atividade 5 & & & & & & & & & & & \\
+Atividade 6 & & & & & & & & & & & \\
+Atividade 7 & & & & & & & & & & & \\
+Atividade 8 & & & & & & & & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\bibliographystyle{sbc}
+\def\refname{Referências Bibliográficas}
+\bibliography{sbc-template}
+
+\end{document}
