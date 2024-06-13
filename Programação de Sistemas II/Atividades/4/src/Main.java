@@ -1,6 +1,4 @@
-package src.br.mackenzie.fci.progsis.code;
-
-import src.br.mackenzie.fci.progsis.code.core.*;
+package src;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,12 +15,14 @@ public class Main {
 
     public static void main(String[] args) {
         boolean sair = false;
+
         while (!sair) {
             System.out.println("=== Menu ===");
             System.out.println("1. Adicionar time");
-            System.out.println("2. Salvar lista");
-            System.out.println("3. Carregar lista");
-            System.out.println("4. Sair");
+            System.out.println("2. Listar times");
+            System.out.println("3. Salvar lista");
+            System.out.println("4. Carregar lista");
+            System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -32,13 +32,16 @@ public class Main {
                     adicionarTime();
                     break;
                 case 2:
-                    salvarLista();
+                    listarTimes();
                     break;
                 case 3:
+                    salvarLista();
+                    break;
+                case 4:
                     carregarLista();
                     System.out.println("Lista carregada com sucesso!");
                     break;
-                case 4:
+                case 5:
                     sair = true;
                     break;
                 default:
@@ -62,6 +65,17 @@ public class Main {
         times.add(time);
 
         System.out.println("Time adicionado à lista com sucesso!");
+    }
+
+    private static void listarTimes() {
+        if (times.isEmpty()) {
+            System.out.println("Lista vazia!");
+        } else {
+            System.out.println("Lista de times:");
+            for (Time time : times) {
+                System.out.println(time.getNome() + " - " + time.getTitulos() + " títulos - " + time.getEstadio());
+            }
+        }
     }
 
     private static void salvarLista() {

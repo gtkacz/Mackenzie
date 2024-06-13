@@ -1,0 +1,19 @@
+Combinações frequentes:
+    support           itemsets
+0      0.6           (Fralda)
+1      0.7          (Cerveja)
+2      0.5            (Sabao)
+3      0.5  (Fralda, Cerveja)
+4      0.3    (Fralda, Sabao)
+
+===================
+
+
+Regras de associação:
+   antecedents consequents  antecedent support  consequent support  support  \
+0    (Fralda)   (Cerveja)                 0.6                 0.7      0.5   
+1   (Cerveja)    (Fralda)                 0.7                 0.6      0.5   
+
+   confidence      lift  leverage  conviction  zhangs_metric  
+0    0.833333  1.190476      0.08         1.8       0.400000  
+1    0.714286  1.190476      0.08         1.4       0.533333  

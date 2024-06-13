@@ -1,4 +1,4 @@
-package src.br.mackenzie.fci.progsis.code.core;
+package src;
 
 /**
  *

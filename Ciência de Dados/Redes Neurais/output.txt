@@ -1,0 +1,17 @@
+Matriz de Confusão (Treinamento):
+┌            ┐
+│ 8238   45  │
+│ 329    605 │
+└            ┘
+
+Acurácia (Treinamento): 95.9%
+
+===================
+
+Matriz de Confusão (Teste):
+┌            ┐
+│ 2085   12  │
+│ 84     124 │
+└            ┘
+
+Acurácia (Teste): 95.8%

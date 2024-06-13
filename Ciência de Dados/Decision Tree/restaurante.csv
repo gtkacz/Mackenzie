@@ -1,0 +1,9 @@
+ID;EP;QR;LE;R
+R1;Muita;Boa;Ruim;Lucro
+R2;Muita;Boa;Boa;Lucro
+R3;Pouca;Boa;Boa;Lucro
+R4;Pouca;Ótima;Ruim;Prejuízo
+R5;Pouca;Ótima;Boa;Prejuízo
+R6;Muita;Ótima;Boa;Lucro
+R7;Muita;Ótima;Ruim;Prejuízo
+R8;Pouca;Boa;Ruim;Prejuízo

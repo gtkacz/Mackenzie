@@ -1,0 +1,21 @@
+ID;Gênero;Tipo de Carro;Tamanho da Camisa;Classe Social
+1;M;Familiar;P;C
+2;M;Esportivo;M;C
+3;M;Esportivo;M;C
+4;M;Esportivo;L;C
+5;M;Esportivo;X;C
+6;M;Esportivo;X;C
+7;F;Esportivo;P;C
+8;F;Esportivo;P;C
+9;F;Esportivo;M;C
+10;F;Luxo;L;C
+11;M;Familiar;L;B
+12;M;Familiar;X;B
+13;M;Familiar;M;B
+14;M;Luxo;X;B
+15;F;Luxo;P;B
+16;F;Luxo;P;B
+17;F;Luxo;M;B
+18;F;Luxo;M;B
+19;F;Luxo;M;B
+20;F;Luxo;L;B
